@@ -1,0 +1,32 @@
+===============
+nama          : A
+nik           : 111
+jenisKelamin  : Laki-laki
+pendapatan    : 25.0
+===============
+nama          : B
+nik           : 111
+jenisKelamin  : Perempuan
+pendapatan    : 90.0
+nim           : 16515030111100
+ipk           : 4.0
+status        : Teknik Komputer, 2016
+===============
+nama          : C
+nik           : 111
+jenisKelamin  : Laki-laki
+pendapatan    : 1205.0
+tahun masuk  : 2016
+jumlah anak  : 4
+gaji         : 1000.0
+===============
+nama          : D
+nik           : 111
+jenisKelamin  : Laki-laki
+pendapatan    : 1285.0
+tahun masuk  : 2017
+jumlah anak  : 3
+gaji         : 1000.0
+Departemen   : HRD
+===============
+PS C:\Users\agung\OneDrive\vscode sem2> 
