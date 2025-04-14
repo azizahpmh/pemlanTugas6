@@ -1,0 +1,56 @@
+package Tugas6Pratikum;
+
+import java.time.LocalDate;
+import java.time.Period;
+
+public class Pekerja extends Manusia {
+    private double gaji;
+    private LocalDate tahunMasuk;
+    private int jumlahAnak;
+
+    public Pekerja(int gaji, int tahun, int bulan, int tanggal, String nama, String nik, boolean jenisKelamin, boolean menikah) {
+        super(nama, nik, jenisKelamin, menikah);
+        this.gaji = gaji;
+        this.tahunMasuk = LocalDate.of(tahun, bulan, tanggal);
+    }
+
+    public void setJumlahAnak(int jumlahAnak) {
+        this.jumlahAnak = jumlahAnak;
+    }
+
+    public double getGaji() {
+        return gaji;
+    }
+
+    public LocalDate getTahunMasuk() {
+        return tahunMasuk;
+    }
+
+    public int getJumlahAnak() {
+        return jumlahAnak;
+    }
+
+    public double getBonus() {
+        int tahunKerja = Period.between(tahunMasuk, LocalDate.now()).getYears();
+        if (tahunKerja < 5) {
+            return 0.05 * gaji;
+        } else if (tahunKerja < 10) {
+            return 0.10 * gaji;
+        } else {
+            return 0.15 * gaji;
+        }
+    }
+
+    @Override
+    public double getPendapatan() {
+        return gaji + getBonus() + (jumlahAnak * 20) + super.getTunjangan();
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+               "\ntahun masuk  : " + tahunMasuk.getYear() +
+               "\njumlah anak  : " + jumlahAnak +
+               "\ngaji         : " + gaji;
+    }
+}
